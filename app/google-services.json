@@ -1,0 +1,87 @@
+{
+  "project_info": {
+    "project_number": "73512261253",
+    "firebase_url": "https://titova-620c2-default-rtdb.firebaseio.com",
+    "project_id": "titova-620c2",
+    "storage_bucket": "titova-620c2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:73512261253:android:a77969ce9b76c7c6c67bec",
+        "android_client_info": {
+          "package_name": "app.example.myapplication"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAZwcKryhquCVw-bbr6IYsq--j_sjJjPno"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:73512261253:android:ad8a40f954a80963c67bec",
+        "android_client_info": {
+          "package_name": "app.examplecom.titova_vkr"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAZwcKryhquCVw-bbr6IYsq--j_sjJjPno"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:73512261253:android:d9453a527af4b2b9c67bec",
+        "android_client_info": {
+          "package_name": "app.titova.com.myapplication"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAZwcKryhquCVw-bbr6IYsq--j_sjJjPno"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:73512261253:android:d9775823203efffec67bec",
+        "android_client_info": {
+          "package_name": "app.titova.vkr"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAZwcKryhquCVw-bbr6IYsq--j_sjJjPno"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
