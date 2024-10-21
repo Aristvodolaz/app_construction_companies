@@ -50,7 +50,12 @@ class TaskViewModel : ViewModel() {
             database.child(task.id).setValue(task)
         }
     }
-
+    fun updateTaskStatus(taskId: String, newStatus: String) {
+        viewModelScope.launch {
+            val taskRef = database.child(taskId) // Найдем задачу по ID
+            taskRef.child("status").setValue(newStatus) // Обновим поле "status" в Firebase
+        }
+    }
     fun assignTask(taskId: String, newAssignee: String) {
         viewModelScope.launch {
             val taskRef = database.child(taskId)
