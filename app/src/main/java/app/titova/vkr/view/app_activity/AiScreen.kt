@@ -30,7 +30,7 @@ import java.io.InputStream
 @Composable
 fun AiScreen(navController: NavHostController, modelPath: String) {
     var query by remember { mutableStateOf("") }
-    var response by remember { mutableStateOf("AI response will appear here.") }
+    var response by remember { mutableStateOf("Здесь появится ответ искусственного интеллекта.") }
     var capturedImage by remember { mutableStateOf<Bitmap?>(null) }
     var showCamera by remember { mutableStateOf(false) }
     var showGallery by remember { mutableStateOf(false) }
