@@ -59,7 +59,7 @@ class AuthViewModel : ViewModel() {
         }
     }
 
-    fun registerUser(email: String, password: String) {
+    fun registerUser(email: String, password: String, userDetails: UserDetails) {
         if (!isValidEmail(email)) {
             _loginStatus.value = "Неверный формат электронной почты."
             return
@@ -74,12 +74,27 @@ class AuthViewModel : ViewModel() {
                 .addOnCompleteListener { task ->
                     if (task.isSuccessful) {
                         _loginStatus.value = "Регистрация выполнена успешно."
+                        saveUserDetails(email, userDetails) // Сохранение данных пользователя
                     } else {
                         _loginStatus.value = "Ошибка регистрации: ${task.exception?.message}"
                     }
                 }
         }
     }
+
+    private fun saveUserDetails(email: String, userDetails: UserDetails) {
+        val sanitizedEmail = email.replace(".", "_")
+        val database = FirebaseDatabase.getInstance().getReference("Users/$sanitizedEmail")
+
+        database.setValue(userDetails).addOnCompleteListener { task ->
+            if (task.isSuccessful) {
+                _loginStatus.value = "Данные пользователя сохранены."
+            } else {
+                _loginStatus.value = "Ошибка при сохранении данных пользователя: ${task.exception?.message}"
+            }
+        }
+    }
+
 
     private fun isValidEmail(email: String): Boolean {
         return Patterns.EMAIL_ADDRESS.matcher(email).matches()
